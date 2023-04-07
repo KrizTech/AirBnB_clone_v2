@@ -10,7 +10,8 @@ from fabric.api import env, local, put, run, runs_once
 
 
 env.hosts = ['54.146.93.232', '100.26.17.110']
-
+env.user = 'ubuntu'
+env.key_filename = '~/.ssh/id_rsa'
 
 def do_deploy(archive_path):
     """Distributes an archive to a web server.
